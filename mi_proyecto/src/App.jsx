@@ -6,9 +6,15 @@ import MainPagina from './componentes/MainPagina'
 import AsidePagina from './componentes/AsidePagina'
 import FooterPagina from './componentes/FooterPagina'
 import PanelPa from './componentes/PanelPa'
+import ListaCursos from './componentes/ListaCursos'
+import PaginaBusqueda from './componentes/PaginaBusqueda'
+import CursoApp from './componentes/CursoApp'
+import FormularioSimple from './componentes/FormularioSimple'
+import FormularioPagina from './componentes/FormularioPagina'
 
 function App() {
   const [count, setCount] = useState(0)
+  console.log("Renderizando app");
 
   const textos = [
      {frase:"Portal Académico"},
@@ -25,6 +31,11 @@ function App() {
     <>
       <HeaderPagina texto ={textos} />
       <NavPagina />
+      <FormularioPagina />
+      <MainPagina  />
+      <FormularioSimple />
+      <AsidePagina  />
+      <CursoApp></CursoApp>
       <PanelPa titulo={"Aviso académico"}>
         <p>Revisar las fechas de evaluación.</p>
       </PanelPa>
@@ -34,8 +45,10 @@ function App() {
           <li>Presentación de proyectos</li>
         </ul>
       </PanelPa>
-      <MainPagina  />
-      <AsidePagina  />
+      <ListaCursos></ListaCursos>
+      <br />
+      <PaginaBusqueda></PaginaBusqueda>
+      
       <FooterPagina  palabra ={palabras} />
     </>
   )
